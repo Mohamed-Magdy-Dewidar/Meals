@@ -2,9 +2,7 @@
 
 A dynamic web app to discover recipes by area, ingredient, or category,with step-by-step instructions and YouTube tutorials.
 
-[![Meals Homepage](img/HomePage.png)](https://mohamed-magdy-dewidar.github.io/Meals/)
-[![Recipe Details](img/MealDetails.png)](https://mohamed-magdy-dewidar.github.io/Meals/)
-[![Sidebar Filters](img/MealSidebar.png)](https://mohamed-magdy-dewidar.github.io/Meals/)
+
 
 
 ## 🔗 Live Demo
