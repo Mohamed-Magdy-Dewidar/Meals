@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="./../fontawesome-free-6.5.2-web/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <title>Game Over</title>
+  </head>
+
+  <body>
+    <!-- Start of Home -->
+    <div class="home w-100">
+      <section id="hero" class="allMenu">
+        <div class="overlay">
+          <div id="leftMenu" class="sidenav">
+            <ul class="items position-fixed pt-4">
+              <li class="me-5" id="Search"><a href="#search">Search</a></li>
+              <li class="me-5" id="category_link">
+                <a href="#hero">Categories</a>
+              </li>
+              <li class="me-5" id="Area_link"><a href="#hero">Area</a></li>
+              <li class="me-5" id="Ingredients_link">
+                <a href="#hero">Ingredients</a>
+              </li>
+              <li class="me-5" id="Contact_link"><a href="#hero">Contact Us</a></li>
+              <div class="footer-nav position-absolute text-white">
+                <div class="icons d-flex justify-content-start">
+                  <i class="fa-brands fa-facebook ms-2"></i>
+                  <i class="fa-brands fa-twitter ms-2"></i>
+                  <i class="fa-solid fa-globe ms-2"></i>
+                </div>
+                <div class="footer">
+                  <p class="text-white p-2">
+                    Copyright Â© 2019 All Rights <br />Reserved.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="openTag text-center bg-white p-2 position-absolute d-flex flex-column justify-content-between"
+              >
+                <img src="./img/yummyLogo.png" class="mt-3" width="50" alt="" />
+                <i class="fas fa-bars fa-2x"> </i>
+                <i class="fa-solid open-close-icon fa-2x fa-x"></i>
+                <div class="mb-3">
+                  <i class="fa-solid fa-globe d-block"></i>
+                  <i class="fa-solid fa-share-nodes"></i>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <div class="food mt-5 ps-5 ms-5 me-4 pe-5">
+          <div class="container">
+            <div class="row g-4" id="Showmeal"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="details" class="details d-none">
+        <div class="container">
+          <header class="hstack justify-content-between">
+            <h1 class="text-center h3 py-4 text-white">Details</h1>
+            <button
+              class="btn-close btn-close-white text-white"
+              id="btnClose"
+            ></button>
+          </header>
+          <div class="row g-4" id="detailsContent"></div>
+        </div>
+      </section>
+
+      <section class="search d-none" id="search">
+        <div class="container w-75">
+          <div class="row py-4">
+            <div class="col-md-6">
+              <input
+                class="form-control searchbyname bg-transparent text-white"
+                type="text"
+                placeholder="Search By Name"
+                fdprocessedid="bbnfsj"
+              />
+            </div>
+            <div class="col-md-6">
+              <!-- TYPE LETTER THEN ENTER -->
+              <input
+                maxlength="1"
+                class="form-control letter bg-transparent text-white"
+                type="text"
+                placeholder="Search By First Letter"
+                fdprocessedid="0se8n"
+              />
+            </div>
+            <div class="row g-4" id="mealbyletter"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="category" class="d-none">
+        <div class="food mt-5 ps-5 ms-5 me-4 pe-5">
+          <div class="container">
+            <div class="row g-4" id="showCategory"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="countries" class="d-none">
+        <div class="container mt-2">
+          <div
+            class="row py-4 area px-3 me-0 pt-4 mx-auto g-4"
+            id="filterByCountry"
+          >
+            <div class="col-md-3 region" data-country="American">
+              <i class="fa-solid fa-house-laptop text-white fa-4x"></i>
+              <h3 class="text-white">American</h3>
+            </div>
+            <div class="col-md-3 region" data-country="British">
+              <i class="fa-solid fa-house-laptop text-white fa-4x"></i>
+              <h3 class="text-white">British</h3>
+            </div>
+            <div class="col-md-3 region" data-country="Canadian">
+              <i class="fa-solid fa-house-laptop text-white fa-4x"></i>
+              <h3 class="text-white">Canadian</h3>
+            </div>
+            <div class="col-md-3 region" data-country="Chinese">
+              <i class="fa-solid fa-house-laptop text-white fa-4x"></i>
+              <h3 class="text-white">Chinese</h3>
+            </div>
+            <div class="col-md-3 region" data-country="Croatian">
+              <i class="fa-solid fa-house-laptop text-white fa-4x"></i>
+              <h3 class="text-white">Croatian</h3>
+            </div>
+            <div class="col-md-3 region" data-country="Dutch">
+              <i class="fa-solid fa-house-laptop text-white fa-4x"></i>
+              <h3 class="text-white">Dutch</h3>
+            </div>
+            <div class="col-md-3 region" data-country="Egyptian">
+              <i class="fa-solid fa-house-laptop text-white fa-4x"></i>
+              <h3 class="text-white">Egyptian</h3>
+            </div>
+            <div class="col-md-3 region" data-country="Filipino">
+              <i class="fa-solid fa-house-laptop text-white fa-4x"></i>
+              <h3 class="text-white">Filipino</h3>
+            </div>
+            <div class="col-md-3 region" data-country="French">
+              <i class="fa-solid fa-house-laptop text-white fa-4x"></i>
+              <h3 class="text-white">French</h3>
+            </div>
+            <div class="col-md-3 region" data-country="Greek">
+              <i class="fa-solid fa-house-laptop text-white fa-4x"></i>
+              <h3 class="text-white">Greek</h3>
+            </div>
+            <div class="col-md-3 region" data-country="Indian">
+              <i class="fa-solid fa-house-laptop text-white fa-4x"></i>
+              <h3 class="text-white">Indian</h3>
+            </div>
+            <div class="col-md-3 region" data-country="Irish">
+              <i class="fa-solid fa-house-laptop text-white fa-4x"></i>
+              <h3 class="text-white">Irish</h3>
+            </div>
+            <div class="col-md-3 region" data-country="Italian">
+              <i class="fa-solid fa-house-laptop text-white fa-4x"></i>
+              <h3 class="text-white">Italian</h3>
+            </div>
+            <div class="col-md-3 region" data-country="Jamaican">
+              <i class="fa-solid fa-house-laptop text-white fa-4x"></i>
+              <h3 class="text-white">Jamaican</h3>
+            </div>
+            <div class="col-md-3 region" data-country="Japanese">
+              <i class="fa-solid fa-house-laptop text-white fa-4x"></i>
+              <h3 class="text-white">Japanese</h3>
+            </div>
+            <div class="col-md-3 region" data-country="Kenyan">
+              <i class="fa-solid fa-house-laptop text-white fa-4x"></i>
+              <h3 class="text-white">Kenyan</h3>
+            </div>
+            <div class="col-md-3 region" data-country="Malaysian">
+              <i class="fa-solid fa-house-laptop text-white fa-4x"></i>
+              <h3 class="text-white">Malaysian</h3>
+            </div>
+            <div class="col-md-3 region" data-country="Mexican">
+              <i class="fa-solid fa-house-laptop text-white fa-4x"></i>
+              <h3 class="text-white">Mexican</h3>
+            </div>
+            <div class="col-md-3 region" data-country="Moroccan">
+              <i class="fa-solid fa-house-laptop text-white fa-4x"></i>
+              <h3 class="text-white">Moroccan</h3>
+            </div>
+            <div class="col-md-3 region" data-country="Polish">
+              <i class="fa-solid fa-house-laptop text-white fa-4x"></i>
+              <h3 class="text-white">Polish</h3>
+            </div>
+            <div class="col-md-3 region" data-country="Portuguese">
+              <i class="fa-solid fa-house-laptop text-white fa-4x"></i>
+              <h3 class="text-white">Portuguese</h3>
+            </div>
+            <div class="col-md-3 region" data-country="Russian">
+              <i class="fa-solid fa-house-laptop text-white fa-4x"></i>
+              <h3 class="text-white">Russian</h3>
+            </div>
+            <div class="col-md-3 region" data-country="Spanish">
+              <i class="fa-solid fa-house-laptop text-white fa-4x"></i>
+              <h3 class="text-white">American</h3>
+            </div>
+            <div class="col-md-3 region" data-country="Thai">
+              <i class="fa-solid fa-house-laptop text-white fa-4x"></i>
+              <h3 class="text-white">Thai</h3>
+            </div>
+            <div class="col-md-3 region" data-country="Tunisian">
+              <i class="fa-solid fa-house-laptop text-white fa-4x"></i>
+              <h3 class="text-white">Tunisian</h3>
+            </div>
+            <div class="col-md-3 region" data-country="Turkish">
+              <i class="fa-solid fa-house-laptop text-white fa-4x"></i>
+              <h3 class="text-white">Turkish</h3>
+            </div>
+            <div class="col-md-3 region" data-country="Ukrainian">
+              <i class="fa-solid fa-house-laptop text-white fa-4x"></i>
+              <h3 class="text-white">Ukrainian</h3>
+            </div>
+            <div class="col-md-3 region" data-country="Unknown">
+              <i class="fa-solid fa-house-laptop text-white fa-4x"></i>
+              <h3 class="text-white">Unknown</h3>
+            </div>
+
+            <div class="col-md-3 region" data-country="Vietnamese">
+              <i class="fa-solid fa-house-laptop text-white fa-4x"></i>
+              <h3 class="text-white">Vietnamese</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="Ingredients" class="recipes d-none">
+        <div class="container mt-2">
+          <div
+            class="row ingredients pt-4 mx-auto g-4"
+            id="filterByingredients"
+          >
+            <div
+              class="col-md-3 ingredient text-center"
+              data-ingredient="Chicken"
+            >
+              <i
+                class="fa-solid fa-drumstick-bite mb-2 text-center text-white fa-4x"
+              ></i>
+              <h3 class="text-white text-center">Chicken</h3>
+              <p class="text-white">
+                The chicken is a type of domesticated fowl, a subspecies of the
+                red junglefowl (Gallus gallus). It is one of
+              </p>
+            </div>
+            <div
+              class="col-md-3 ingredient text-center"
+              data-ingredient="Salmon"
+            >
+              <i
+                class="fa-solid fa-drumstick-bite mb-2 text-center text-white fa-4x"
+              ></i>
+              <h3 class="text-white text-center">Salmon</h3>
+              <p class="text-white">
+                Salmon is the common name for several species of ray-finned fish
+                in the family Salmonidae. Other fish in the same
+              </p>
+            </div>
+            <div class="col-md-3 ingredient text-center" data-ingredient="Beef">
+              <i
+                class="fa-solid fa-drumstick-bite mb-2 text-center text-white fa-4x"
+              ></i>
+              <h3 class="text-white text-center">Beef</h3>
+              <p class="text-white">
+                Beef is the culinary name for meat from cattle, particularly
+                skeletal muscle. Humans have been eating beef since prehistoric
+                times.
+              </p>
+            </div>
+            <div class="col-md-3 ingredient text-center" data-ingredient="Pork">
+              <i
+                class="fa-solid fa-drumstick-bite mb-2 text-center text-white fa-4x"
+              ></i>
+              <h3 class="text-white text-center">Pork</h3>
+              <p class="text-white">
+                Pork is the culinary name for the flesh of a domestic pig (Sus
+                scrofa domesticus). It is the most commonly
+              </p>
+            </div>
+            <div
+              class="col-md-3 ingredient text-center"
+              data-ingredient="Avocado"
+            >
+              <i
+                class="fa-solid fa-drumstick-bite mb-2 text-center text-white fa-4x"
+              ></i>
+              <h3 class="text-white text-center">Avocado</h3>
+              <p class="text-white">
+                The avocado, a tree with probable origin in South Central
+                Mexico, is classified as a member of the flowering plant
+              </p>
+            </div>
+            <div
+              class="col-md-3 ingredient text-center"
+              data-ingredient="Apple Cider Vinegar"
+            >
+              <i
+                class="fa-solid fa-drumstick-bite mb-2 text-center text-white fa-4x"
+              ></i>
+              <h3 class="text-white text-center">Apple Cider Vinegar</h3>
+              <p class="text-white">
+                Apple cider vinegar, or cider vinegar, is a vinegar made from
+                fermented apple juice, and used in salad dressings, marinades,
+              </p>
+            </div>
+            <div
+              class="col-md-3 ingredient text-center"
+              data-ingredient="Asparagus"
+            >
+              <i
+                class="fa-solid fa-drumstick-bite mb-2 text-center text-white fa-4x"
+              ></i>
+              <h3 class="text-white text-center">Asparagus</h3>
+              <p class="text-white">
+                Asparagus, or garden asparagus, folk name sparrow grass,
+                scientific name Asparagus officinalis, is a perennial flowering
+                plant species in the
+              </p>
+            </div>
+            <div
+              class="col-md-3 ingredient text-center"
+              data-ingredient="Aubergine"
+            >
+              <i
+                class="fa-solid fa-drumstick-bite mb-2 text-center text-white fa-4x"
+              ></i>
+              <h3 class="text-white text-center">Aubergine</h3>
+              <p class="text-white">
+                Eggplant (US, Australia), aubergine (UK), or brinjal (South Asia
+                and South Africa) is a plant species in the nightshade family
+              </p>
+            </div>
+            <div
+              class="col-md-3 ingredient text-center"
+              data-ingredient="Baby Plum Tomatoes"
+            >
+              <i
+                class="fa-solid fa-drumstick-bite mb-2 text-center text-white fa-4x"
+              ></i>
+              <h3 class="text-white text-center">Baby Plum Tomatoes</h3>
+              <p class="text-white">
+                The tomato is the edible, often red, berry of the plant Solanum
+                lycopersicum, commonly known as a tomato plant. The
+              </p>
+            </div>
+            <div
+              class="col-md-3 ingredient text-center"
+              data-ingredient="Bacon"
+            >
+              <i
+                class="fa-solid fa-drumstick-bite mb-2 text-center text-white fa-4x"
+              ></i>
+              <h3 class="text-white text-center">Bacon</h3>
+              <p class="text-white">
+                Bacon is a type of salt-cured pork. Bacon is prepared from
+                several different cuts of meat, typically from the pork
+              </p>
+            </div>
+            <div
+              class="col-md-3 ingredient text-center"
+              data-ingredient="Baking Powder"
+            >
+              <i
+                class="fa-solid fa-drumstick-bite mb-2 text-center text-white fa-4x"
+              ></i>
+              <h3 class="text-white text-center">Baking Powder</h3>
+              <p class="text-white">
+                Baking powder is a dry chemical leavening agent, a mixture of a
+                carbonate or bicarbonate and a weak acid. The
+              </p>
+            </div>
+            <div
+              class="col-md-3 ingredient text-center"
+              data-ingredient="Balsamic Vinegar"
+            >
+              <i
+                class="fa-solid fa-drumstick-bite mb-2 text-center text-white fa-4x"
+              ></i>
+              <h3 class="text-white text-center">Balsamic Vinegar</h3>
+              <p class="text-white">
+                Balsamic vinegar (Italian: aceto balsamico), occasionally
+                shortened to balsamic, is a very dark, concentrated, and
+                intensely flavoured vinegar originating in
+              </p>
+            </div>
+            <div
+              class="col-md-3 ingredient text-center"
+              data-ingredient="Basil"
+            >
+              <i
+                class="fa-solid fa-drumstick-bite mb-2 text-center text-white fa-4x"
+              ></i>
+              <h3 class="text-white text-center">Basil</h3>
+              <p class="text-white">
+                Basil, also called great basil, is a culinary herb of the family
+                Lamiaceae (mints). Basil is native to tropical ingredients from
+              </p>
+            </div>
+            <div
+              class="col-md-3 ingredient text-center"
+              data-ingredient="Basil Leaves"
+            >
+              <i
+                class="fa-solid fa-drumstick-bite mb-2 text-center text-white fa-4x"
+              ></i>
+              <h3 class="text-white text-center">Basil Leaves</h3>
+              <p class="text-white">
+                Basil, also called great basil, is a culinary herb of the family
+                Lamiaceae (mints).
+              </p>
+            </div>
+            <div
+              class="col-md-3 ingredient text-center"
+              data-ingredient="Basmati Rice"
+            >
+              <i
+                class="fa-solid fa-drumstick-bite mb-2 text-center text-white fa-4x"
+              ></i>
+              <h3 class="text-white text-center">Basmati Rice</h3>
+              <p class="text-white">
+                Basmati is a variety of long, slender-grained aromatic rice
+                which is traditionally from the Indian subcontinent. As of
+                2018-19, India
+              </p>
+            </div>
+            <div
+              class="col-md-3 ingredient text-center"
+              data-ingredient="Bay Leaf"
+            >
+              <i
+                class="fa-solid fa-drumstick-bite mb-2 text-center text-white fa-4x"
+              ></i>
+              <h3 class="text-white text-center">Bay Leaf</h3>
+              <p class="text-white">
+                The bay leaf is an aromatic leaf commonly used in cooking. It
+                can be used whole, or as dried and
+              </p>
+            </div>
+            <div
+              class="col-md-3 ingredient text-center"
+              data-ingredient="Bay Leaves"
+            >
+              <i
+                class="fa-solid fa-drumstick-bite mb-2 text-center text-white fa-4x"
+              ></i>
+              <h3 class="text-white text-center">Bay Leaves</h3>
+              <p class="text-white">
+                The bay leaf is an aromatic leaf commonly used in cooking. It
+                can be used whole, or as dried and
+              </p>
+            </div>
+            <div
+              class="col-md-3 ingredient text-center"
+              data-ingredient="Beef Brisket"
+            >
+              <i
+                class="fa-solid fa-drumstick-bite mb-2 text-center text-white fa-4x"
+              ></i>
+              <h3 class="text-white text-center">Beef Brisket</h3>
+              <p class="text-white">
+                Beef is the culinary name for meat from cattle, particularly
+                skeletal muscle. Humans have been eating beef since prehistoric
+                times.
+              </p>
+            </div>
+            <div
+              class="col-md-3 ingredient text-center"
+              data-ingredient="Beef Fillet"
+            >
+              <i
+                class="fa-solid fa-drumstick-bite mb-2 text-center text-white fa-4x"
+              ></i>
+              <h3 class="text-white text-center">Beef Fillet</h3>
+              <p class="text-white">
+                Beef is the culinary name for meat from cattle, particularly
+                skeletal muscle. Humans have been eating beef since prehistoric
+                times.
+              </p>
+            </div>
+            <div
+              class="col-md-3 ingredient text-center"
+              data-ingredient="Beef Gravy"
+            >
+              <i
+                class="fa-solid fa-drumstick-bite mb-2 text-center text-white fa-4x"
+              ></i>
+              <h3 class="text-white text-center">Beef Gravy</h3>
+              <p class="text-white">
+                Beef is the culinary name for meat from cattle, particularly
+                skeletal muscle. Humans have been eating beef since prehistoric
+                times.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="Contact d-none" id="Contact">
+        <div class="container mx-auto">
+          <div class="row py-5 g-4">
+            <div class="contact  d-flex justify-content-center align-content-center">
+              <div class="container  mx-auto text-center w-75  mt-5">
+                <div class="col-md-12 mb-2 ">
+                  <input
+                    id="nameInput"
+                    onkeyup="inputsValidation()"
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter Your Name"
+                    fdprocessedid="s79tvn"
+                  />
+                  <div id="nameAlert" class="alert alert-danger w-100 mt-2 d-none">
+                    Special characters and numbers not allowed
+                  </div>
+                </div>
+                <div class="col-md-12 mb-2">
+                  <input
+                    id="emailInput"
+                    onkeyup="inputsValidation()"
+                    type="email"
+                    class="form-control"
+                    placeholder="Enter Your Email"
+                    fdprocessedid="w40255"
+                  />
+                  <div id="emailAlert" class="alert alert-danger w-100 mt-2 d-none">
+                    Email not valid *exemple@yyy.zzz
+                  </div>
+                </div>
+                <div class="col-md-12 mb-2">
+                  <input
+                    id="phoneInput"
+                    onkeyup="inputsValidation()"
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter Your Phone"
+                    fdprocessedid="8bnj88i"
+                  />
+                  <div id="phoneAlert" class="alert alert-danger w-100 mt-2 d-none">
+                    Enter valid Phone Number
+                  </div>
+                </div>
+                <div class="col-md-12 mb-2">
+                  <input
+                    id="ageInput"
+                    onkeyup="inputsValidation()"
+                    type="number"
+                    class="form-control"
+                    placeholder="Enter Your Age"
+                    fdprocessedid="ng6n4c"
+                  />
+                  <div id="ageAlert" class="alert alert-danger w-100 mt-2 d-none">
+                    Enter valid age
+                  </div>
+                </div>
+                <div class="col-md-12 mb-2">
+                  <input
+                    id="passwordInput"
+                    onkeyup="inputsValidation()"
+                    type="password"
+                    class="form-control"
+                    placeholder="Enter Your Password"
+                    fdprocessedid="umd7h"
+                  />
+                  <div
+                    id="passwordAlert"
+                    class="alert alert-danger w-100 mt-2 d-none"
+                  >
+                    Enter valid password *Minimum eight characters, at least one
+                    letter and one number:*
+                  </div>
+                </div>
+                <div class="col-md-12 mb-2">
+                  <input
+                    id="repasswordInput"
+                    onkeyup="inputsValidation()"
+                    type="password"
+                    class="form-control"
+                    placeholder="Repassword"
+                    fdprocessedid="p7rpoc"
+                  />
+                  <div
+                    id="repasswordAlert"
+                    class="alert alert-danger w-100 mt-2 d-none"
+                  >
+                    Enter valid repassword
+                  </div>
+                </div>
+                <button
+                  id="submitBtn"
+                  disabled=""
+                  class="btn btn-outline-danger px-2 mt-3 mb"
+                >
+                  Submit
+                </button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="d-none loader mx-auto">
+        <span class="loader"></span>
+      </div>
+    </div>
+    <!-- Start of Details Section -->
+
+    <!-- End Of Home -->
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/index.js" type="module"></script>
+  </body>
+</html>

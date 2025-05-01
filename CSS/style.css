@@ -1,0 +1,268 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none !important;
+  list-style: none !important;
+  outline: none !important;
+}
+
+/* ::selection
+  */
+
+::selection{
+  color: #323544;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Montserrat", sans-serif;
+}
+p {
+  color: #bfc1c8;
+}
+.grey {
+  color: #bfc1c8;
+}
+
+h4 {
+  color: #bfc1c8;
+}
+.text-icon {
+  color: #bfc1c8;
+}
+
+a {
+  text-decoration: none;
+  background: transparent;
+}
+body {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.home {
+  width: 100%;
+  min-height: 100dvh;
+  overflow: auto;
+  background-color: #0D0D0D;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+}
+
+.home-content h2 {
+  font-size: 60px;
+}
+
+.openNav {
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+}
+
+.overlay .items {
+  background-color: #111111;
+  min-height: 100vh;
+
+  text-align: center;
+  width: 270px;
+  /* left: 0px; */
+  left: -270px;
+  z-index: 20;
+  transition: all 0.5s;
+  top: 0;
+}
+.overlay .footer-nav {
+  z-index: 999999;
+  bottom: 20px;
+  left: -270px;
+}
+.overlay .footer-nav p{
+  text-align: left;
+}
+
+.overlay .items li {
+  color: white;
+  text-align: left;
+  display: none;
+}
+.overlay .items .closebtn {
+  top: -20px;
+  right: -150px;
+}
+.overlay a {
+  display: block;
+  padding: 10px 0px 10px 0px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #818181;
+  transition: 0.3s;
+  color: white;
+}
+.overlay a:hover {
+  color: rgb(72, 10, 10) !important;
+}
+
+.overlay .openTag {
+  left: 270px;
+  text-align: center;
+  top: 0%;
+  transition: all 0.5s;
+  cursor: pointer;
+  height: 100vh;
+  z-index: 9999999;
+}
+.overlay .openTag i {
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.overlay .openTag i:hover {
+  color: rgb(208, 3, 3);
+  cursor: pointer;
+}
+
+/* Close Button */
+.open-close-icon {
+  display: none;
+}
+.fa-bars {
+  display: block;
+}
+/* End NavBar */
+
+.dish {
+  overflow: hidden;
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+.dish .text-layer {
+  position: absolute;
+  top: 200%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  background-color: #f9f6f6ca;
+  transition: all 0.6s;
+}
+.dish:hover .text-layer{
+  opacity: 1;
+  top: 0;
+}
+
+
+/* Details section */
+.recipeBtn{
+  background-color: #CFF4FC !important;
+  color: rgba(26, 26, 201, 0.926);
+
+}
+.btn-tags{
+  background-color: #F8D7DA;
+}
+.btn-tags:hover{
+  background-color: #f8d7dae7;
+}
+
+/* Search */
+/* .search{
+  background-color: green;
+  z-index: 9999999999;
+}
+ */
+/* Details Section */
+
+
+/* .layer .inner {
+  background-image: url(./../img/5.jpg);
+  height: 350px;
+  background-size: cover;
+  background-position: center center;
+} */
+
+/* Area Section */
+
+#countries .container .area{
+  width: 95%;
+}
+
+/* Loading for loader*/
+.loader {
+  transform: rotateZ(45deg);
+  perspective: 1000px;
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  color: #fff;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  transform: rotateX(70deg);
+  animation: 1s spin linear infinite;
+}
+.loader:after {
+  color: #ff3d00;
+  transform: rotateY(70deg);
+  animation-delay: 0.4s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotateZ(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
+}
+
+@keyframes rotateccw {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+@keyframes spin {
+  0%,
+  100% {
+    box-shadow: 0.2em 0px 0 0px currentcolor;
+  }
+  12% {
+    box-shadow: 0.2em 0.2em 0 0 currentcolor;
+  }
+  25% {
+    box-shadow: 0 0.2em 0 0px currentcolor;
+  }
+  37% {
+    box-shadow: -0.2em 0.2em 0 0 currentcolor;
+  }
+  50% {
+    box-shadow: -0.2em 0 0 0 currentcolor;
+  }
+  62% {
+    box-shadow: -0.2em -0.2em 0 0 currentcolor;
+  }
+  75% {
+    box-shadow: 0px -0.2em 0 0 currentcolor;
+  }
+  87% {
+    box-shadow: 0.2em -0.2em 0 0 currentcolor;
+  }
+}
